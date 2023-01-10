@@ -33,9 +33,9 @@
                 </div> 
             </div>
             <!-- start button -->
-            <i id="play" class="bi bi-play-circle-fill motion generic-button d-none"></i>
+            <i id="play" class="bi bi-play-circle-fill motion generic-button" v-show="!isStarted" @click="autoPlay"></i>
             <!-- stop button -->
-            <i id="pause" class="bi bi-stop-circle-fill motion generic-button"></i>
+            <i id="pause" class="bi bi-stop-circle-fill motion generic-button" v-show="isStarted" @click="stopAutoPlay"></i>
             <!-- prev button -->
             <i id="prev" class="bi bi-arrow-left-circle-fill generic-button arrow-left" @click="changePic('prev'); stopAutoPlay()"></i>
             <!-- next button -->

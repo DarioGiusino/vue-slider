@@ -6,7 +6,8 @@ const app = Vue.createApp({
         return {
             currentIndex: 0,
             pictures,
-            motion: ''
+            motion: '',
+            isStarted: true
         }
     },
     methods: {
@@ -22,11 +23,13 @@ const app = Vue.createApp({
             }
         },
         autoPlay(){
+            this.isStarted = true;
             this.motion = setInterval(() => {
                 this.changePic('next');
             }, 3000);
         },
         stopAutoPlay(){
+            this.isStarted = false;
             clearInterval(this.motion);
         }
     },

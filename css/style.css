@@ -30,19 +30,19 @@ body{
 
 #carousel .generic-button.arrow-left{
     top: 50%;
-    left: 1.5rem;
+    left: -3.5rem;
     transform: translateY(-50%);
 }
 
 #carousel .generic-button.arrow-right{
     top: 50%;
-    right: 1.5rem;
+    right: -3.5rem;
     transform: translateY(-50%);
 }
 
 #carousel .generic-button.motion{
     top: 0.1rem;
-    right: 1.5rem;
+    right: -3.5rem;
 }
 
 /* gallery card */
