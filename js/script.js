@@ -7,6 +7,15 @@ const app = Vue.createApp({
             currentIndex: 0,
             pictures
         }
+    },
+    methods: {
+        changePic(target){
+            if (target === 'prev'){
+                this.currentIndex--
+            } else {
+                this.currentIndex++
+            }
+        }
     }
 });
 
