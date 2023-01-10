@@ -4,7 +4,8 @@ const app = Vue.createApp({
     name: 'Games Slider',
     data(){
         return {
-
+            currentIndex: 0,
+            pictures
         }
     }
 });
