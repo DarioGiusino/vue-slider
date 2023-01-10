@@ -13,9 +13,11 @@ const app = Vue.createApp({
             if (target === 'prev'){
                 this.currentIndex--
                 if(this.currentIndex < 0) this.currentIndex = pictures.length - 1;
-            } else {
+            } else if (target === 'next') {
                 this.currentIndex++
                 if(this.currentIndex === pictures.length) this.currentIndex = 0;
+            } else {
+                this.currentIndex = target;
             }
         }
     }
