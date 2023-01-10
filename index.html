@@ -23,7 +23,7 @@
     <div class="container" id="app">
         <div id="carousel" class="position-relative mt-5">
             <!-- gallery -->
-            <div id="gallery" class="flex-grow-1">
+            <div id="gallery" class="flex-grow-1" @mouseover="stopAutoPlay" @mouseleave="autoPlay">
                 <div v-for="(pic, i) in pictures" class="card text-bg-dark" v-show="currentIndex === i">
                     <img :src="pic.image" class="card-img fit-image" :alt="pic.title">
                     <div class="card-img-overlay">
