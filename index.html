@@ -24,11 +24,11 @@
         <div id="carousel" class="position-relative mt-5">
             <!-- gallery -->
             <div id="gallery" class="flex-grow-1">
-                <div class="card text-bg-dark">
-                    <img src="img/01.webp" class="card-img fit-image" alt="">
+                <div v-for="pic in pictures" class="card text-bg-dark">
+                    <img :src="pic.image" class="card-img fit-image" :alt="pic.title">
                     <div class="card-img-overlay">
-                        <h1 class="card-title"></h1>
-                        <p class="card-text fs-5"></p>
+                        <h1 class="card-title">{{pic.title}}</h1>
+                        <p class="card-text fs-5">{{pic.text}}</p>
                     </div>
                 </div> 
             </div>
