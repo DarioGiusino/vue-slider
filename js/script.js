@@ -12,8 +12,10 @@ const app = Vue.createApp({
         changePic(target){
             if (target === 'prev'){
                 this.currentIndex--
+                if(this.currentIndex < 0) this.currentIndex = pictures.length - 1;
             } else {
                 this.currentIndex++
+                if(this.currentIndex === pictures.length) this.currentIndex = 0;
             }
         }
     }
