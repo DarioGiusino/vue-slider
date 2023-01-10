@@ -1,0 +1,78 @@
+/* # generics */
+body{
+    color: #eeeae0;
+    background-color: #0d1117;
+    font-family: sans-serif;
+}
+
+/* # utilities */
+.fit-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* # carousel */
+/* arrows */
+#carousel .generic-button{
+    position: absolute;
+    z-index: 1;
+    font-size: 2.5rem;
+    opacity: 0.5;
+    cursor: pointer;
+    text-shadow: 2px 2px 2px #404040;
+    transition: text-shadow 0.3s linear;
+}
+
+#carousel .generic-button:hover{
+    text-shadow: 2px 2px 5px #404040;
+}
+
+#carousel .generic-button.arrow-left{
+    top: 50%;
+    left: 1.5rem;
+    transform: translateY(-50%);
+}
+
+#carousel .generic-button.arrow-right{
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+}
+
+#carousel .generic-button.motion{
+    top: 0.1rem;
+    right: 1.5rem;
+}
+
+/* gallery card */
+#gallery .card{
+    height: 500px;
+}
+
+#gallery .card-img-overlay{
+    top: auto;
+    left: auto;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 25px;
+    width: 100%;
+}
+
+/* thumbnails card */
+#thumbnails .thumb-card{
+    width: 18%;
+    height: 100px;
+    cursor: pointer;
+    filter: grayscale(1);
+    border-radius: 10px;
+}
+
+#thumbnails .thumb-card:hover{
+    filter: grayscale(0.5);
+    outline: 2px solid #1d82d3;
+}
+
+#thumbnails .thumb-card.active{
+    filter: grayscale(0);
+    outline: 2px solid #1d82d3;
+}
