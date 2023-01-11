@@ -22,7 +22,8 @@
 <body>
     <div class="container" id="app">
         <div id="carousel" class="position-relative mt-5">
-            <!-- gallery -->
+
+            <!--? MAIN GALLERY -->
             <div id="gallery" class="flex-grow-1" @mouseover="stopAutoPlay" @mouseleave="autoPlay">
                 <div v-for="(pic, i) in pictures" class="card text-bg-dark" v-show="currentIndex === i">
                     <img :src="pic.image" class="card-img fit-image" :alt="pic.title">
@@ -32,20 +33,27 @@
                     </div>
                 </div> 
             </div>
+
+            <!--? BUTTONS  -->
             <!-- start button -->
             <i id="play" class="bi bi-play-circle-fill motion generic-button" v-show="!isStarted" @click="autoPlay"></i>
+
             <!-- stop button -->
             <i id="pause" class="bi bi-stop-circle-fill motion generic-button" v-show="isStarted" @click="stopAutoPlay"></i>
+
             <!-- prev button -->
-            <i id="prev" class="bi bi-arrow-left-circle-fill generic-button arrow-left" @click="changePic('prev'); stopAutoPlay()"></i>
+            <i id="prev" class="bi bi-arrow-left-circle-fill generic-button arrow-left" @click="changePic('prev')"></i>
             <!-- next button -->
-            <i id="next" class="bi bi-arrow-right-circle-fill generic-button arrow-right" @click="changePic('next'); stopAutoPlay()"></i>
-            <!-- thumbnails -->
+
+            <i id="next" class="bi bi-arrow-right-circle-fill generic-button arrow-right" @click="changePic('next')"></i>
+
+            <!--? THUMBNAILS -->
             <div id="thumbnails" class="pt-4 d-flex justify-content-between">
-                <div v-for="(pic, i) in pictures" class="thumb-card" :class="{active: currentIndex === i}" @click="changePic(i); stopAutoPlay()">
+                <div v-for="(pic, i) in pictures" class="thumb-card" :class="{active: currentIndex === i}" @click="changePic(i)">
                     <img class="rounded-3 img-fluid fit-image" :src="pic.image" :alt="pic.title">
                 </div> 
             </div>
+            
         </div>
     </div>
 </body>

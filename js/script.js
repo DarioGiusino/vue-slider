@@ -13,12 +13,15 @@ const app = Vue.createApp({
     methods: {
         changePic(target){
             if (target === 'prev'){
-                this.currentIndex--
+                this.stopAutoPlay();
+                this.currentIndex--;
                 if(this.currentIndex < 0) this.currentIndex = this.pictures.length - 1;
             } else if (target === 'next') {
-                this.currentIndex++
+                this.stopAutoPlay();
+                this.currentIndex++;
                 if(this.currentIndex === this.pictures.length) this.currentIndex = 0;
             } else {
+                this.stopAutoPlay();
                 this.currentIndex = target;
             }
         },
