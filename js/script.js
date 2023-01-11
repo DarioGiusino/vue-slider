@@ -14,10 +14,10 @@ const app = Vue.createApp({
         changePic(target){
             if (target === 'prev'){
                 this.currentIndex--
-                if(this.currentIndex < 0) this.currentIndex = pictures.length - 1;
+                if(this.currentIndex < 0) this.currentIndex = this.pictures.length - 1;
             } else if (target === 'next') {
                 this.currentIndex++
-                if(this.currentIndex === pictures.length) this.currentIndex = 0;
+                if(this.currentIndex === this.pictures.length) this.currentIndex = 0;
             } else {
                 this.currentIndex = target;
             }
